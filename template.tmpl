@@ -1,0 +1,16 @@
+<tmpl_loop name=interfaces>
+   <div>
+    <fieldset>
+       <legend><tmpl_var name="iface"></legend>
+                <form method=post action=#>
+               <input type="hidden" name="iface" value="<tmpl_var name=iface>" />
+        <br/>ip:
+        <input type="text" name="ip" value="<tmpl_var name=inet>" placeholder="Direccion IP" pattern="\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b" title="Direccion no valida" />
+        <br/>netmask:
+        <input type="text" name="nmask" value="<tmpl_var name=netmask>" placeholder="Mascara de red" pattern="\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b" title="Direccion no valida" />
+        <input type=hidden name ="selector" value ="controler"/>
+        <br/><input type="submit" value="Cambiar"/>
+          </form>
+    </fieldset>
+                                                                     </div>
+</tmpl_loop>
